@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="EnvProtectCloudTest" verbose="1" parallel="tests" thread-count="3" time-out="1800000">
+    <test name="test">
+        <classes>
+            <class name="cases.Login"></class>
+            <parameter name="browser" value="chrome"></parameter>
+            <parameter name="url" value="http://192.168.0.14:81/#/login"></parameter>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="extent.ExtentTestNGITestListener"></listener>
+    </listeners>
+</suite>
+
